@@ -7,12 +7,24 @@ a {
   text-decoration: none;
 }
 
+/* FLOAT CLEARFIX  */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.float--left {
+  float: left;
+}
+.float--right {
+  float: right;
+}
 /* BTN*/
 
 .btn {
   height: 34px;
   background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
-  border: 1px solid #d5d5;
+  border: 1px solid #d5d5d5;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
@@ -23,6 +35,7 @@ a {
   cursor: pointer;
   box-sizing: border-box;
   position: relative;
+  color: #333;
 }
 
 .btn:hover::before {
@@ -65,7 +78,7 @@ chrome; -webkit- : 해당 브라우저에서 제공하는 실험적 기능을 �
 fireFox; -moz-
 MiscroSoft; -ms-*/
 
-.input--text::-webkit-input-placeholder {
+/* .input--text::-webkit-input-placeholder {
   color: red;
 }
 .input--text::-ms-input-placeholder {
@@ -73,7 +86,7 @@ MiscroSoft; -ms-*/
 }
 .input--text::-moz-input-placeholder {
   color: red;
-}
+} */
 
 /* HEADER */
 
@@ -87,7 +100,6 @@ header .inner {
   max-width: 980px;
   height: 78px;
   margin: 0 auto;
-  display: flex;
 }
 
 header .menu-group {
@@ -120,6 +132,14 @@ header .main-menu li a {
   color: #3c4146;
 }
 
+header .main-menu li a:hover {
+  color: #4078c0;
+}
+
 header .main-menu li:last-child {
   margin-right: 0;
+}
+
+header .sign-group {
+  display: flex;
 }
