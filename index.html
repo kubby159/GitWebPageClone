@@ -164,6 +164,54 @@
       </div>
     </div>
   </section>
+
+  <!-- Where is -->
+  <section class="section section--where-is">
+    <div class="inner">
+
+      <div class="summary">
+        <div class="summary__title">Where is GitHub?</div>
+        <div class="summary__description">GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
+        </div>
+      </div>
+      <div id="map">
+      
+      </div>
+    </div>
+
+ 
+
+  </section>
 </div>
+
+<script>
+  function initMap() {
+    const myLatLng = {
+      //최초 위도 , 경도 값
+      lat : 37.782293,
+      lng: -122.391240
+    }
+    //new google.maps.Map(맵을 넣을 위치), {옵션} 
+    const map = new google.maps.Map(
+      document.getElementById('map'),
+      {
+        center : myLatLng,
+        scrollwheel: false, //지도위에서 마우스 휠을 사용하지 않음
+        zoom: 18//확대
+
+      }
+    );
+    //Marker의 기능은 지도상 빨간색 표시로 위치를 알려주는 기능.
+    const marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Github'
+    });
+  }
+
+</script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer>
+
+</script>
 </body>
 </html>
