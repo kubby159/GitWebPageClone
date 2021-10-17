@@ -458,3 +458,37 @@ footer .logo {
 footer .logo:hover svg {
   fill: #4078c0;
 }
+
+/* MEDIA */
+/* 미디어타입은 all */
+@media (max-width: 1024px) {
+  header.section .inner {
+    /* 설정 시 우선순위를 주의하자.  */
+
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+  }
+  header .menu-group,
+  header .sign-group {
+    float: none;
+  }
+
+  header .toggle {
+    display: none;
+  }
+
+  header .logo {
+    padding: 12px 0;
+  }
+  #toggle-btn {
+    background: url("../img/toggle-btn.svg");
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    text-indent: -9999px;
+  }
+}
